@@ -1,5 +1,7 @@
 # Top level makefile templates -- customize at will
 
+IMAGE_PREFIX=deweysasser/
+
 # The default target -- other makefiles will add dependencies
 all::
 
@@ -23,4 +25,4 @@ include makefiles/external-state.mk
 
 # AWS docker magic
 include makefiles/docker.mk
-include makefiles/aws-ecr.mk
+
