@@ -7,9 +7,9 @@ cluster of docker machines.
 Used for giving e.g. a cluster of ECS docker hosts logins to private
 docker repositories.
 
-On startup, or whenever any files change in the monitored directory,
-this will execute "docker login" once for each non-blank, non-comment
-line in the file.
+Reads file "login.txt" in (container path) '/monitor' and on startup
+or whenever that file changes, executes "docker login" on each
+non-blank, non-comment line in that file.
 
 '#' is the comment character.
 
