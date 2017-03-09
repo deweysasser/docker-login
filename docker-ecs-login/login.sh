@@ -14,7 +14,7 @@ if [ -x "$base" ] ; then
     fi
 fi
 
-auth=$(cat ~/.docker/config.json | tr -d '\n' | sed -e 's/[ \t]\+/ /g')
+auth=$(cat ~/.docker/config.json | jq -c .auths)
 
 if [ -w $file ] ; then
     (
