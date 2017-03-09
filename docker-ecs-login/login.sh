@@ -20,7 +20,7 @@ if [ -w $file ] ; then
     (
 	cat $file | grep -v ECS_ENGINE_AUTH
 	echo 'ECS_ENGINE_AUTH_TYPE=dockercfg'
-	echo "ECS_ENGINE_AUTH_DATA='$auth'"
+	echo "ECS_ENGINE_AUTH_DATA=$auth"
     ) > $file.new && mv -f $file.new $file
     echo "Updating $file to include new auth data"
 else
